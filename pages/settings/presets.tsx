@@ -321,18 +321,9 @@ export default function Presets() {
                 </div>
 
                 <div className="flex justify-end">
-                  {plan === "free" ? (
-                    <UpgradePlanModal
-                      clickedPlan="Pro"
-                      trigger={"branding_page"}
-                    >
-                      <Button>Upgrade to Save Preset</Button>
-                    </UpgradePlanModal>
-                  ) : (
                     <Button onClick={handleSavePreset} loading={isLoading}>
                       Save Preset
                     </Button>
-                  )}
 
                   {presets ? (
                     <Button
