@@ -224,22 +224,12 @@ export default function Billing() {
                   Teammates that have access to this project.
                 </p>
               </div>
-              {userPlan !== "free" &&
-              (limits === null || (limits && limits.users >= numUsers)) ? (
                 <AddTeamMembers
                   open={isTeamMemberInviteModalOpen}
                   setOpen={setTeamMemberInviteModalOpen}
                 >
                   <Button>Invite</Button>
                 </AddTeamMembers>
-              ) : (
-                <UpgradePlanModal
-                  clickedPlan={"Pro"}
-                  trigger={"invite_team_members"}
-                >
-                  <Button>Upgrade to invite members</Button>
-                </UpgradePlanModal>
-              )}
             </div>
           </div>
 

@@ -91,33 +91,33 @@ export function AddDomainModal({
   // - on pro plan and has custom domain on pro plan disabled
   // - on business plan and has custom domain in dataroom disabled
   // => then show the upgrade modal
-  if (
-    plan === "free" ||
-    (plan === "pro" && !limits?.customDomainOnPro) ||
-    (linkType === "DATAROOM_LINK" &&
-      plan === "business" &&
-      !limits?.customDomainInDataroom)
-  ) {
-    if (children) {
-      return (
-        <UpgradePlanModal
-          clickedPlan={linkType === "DATAROOM_LINK" ? "Data Rooms" : "Business"}
-          trigger={"add_domain_overview"}
-        >
-          <Button>Upgrade to Add Domain</Button>
-        </UpgradePlanModal>
-      );
-    } else {
-      return (
-        <UpgradePlanModal
-          clickedPlan={linkType === "DATAROOM_LINK" ? "Data Rooms" : "Business"}
-          open={open}
-          setOpen={setOpen}
-          trigger={"add_domain_link_sheet"}
-        />
-      );
-    }
-  }
+  // if (
+  //   plan === "free" ||
+  //   (plan === "pro" && !limits?.customDomainOnPro) ||
+  //   (linkType === "DATAROOM_LINK" &&
+  //     plan === "business" &&
+  //     !limits?.customDomainInDataroom)
+  // ) {
+  //   if (children) {
+  //     return (
+  //       <UpgradePlanModal
+  //         clickedPlan={linkType === "DATAROOM_LINK" ? "Data Rooms" : "Business"}
+  //         trigger={"add_domain_overview"}
+  //       >
+  //         <Button>Upgrade to Add Domain</Button>
+  //       </UpgradePlanModal>
+  //     );
+  //   } else {
+  //     return (
+  //       <UpgradePlanModal
+  //         clickedPlan={linkType === "DATAROOM_LINK" ? "Data Rooms" : "Business"}
+  //         open={open}
+  //         setOpen={setOpen}
+  //         trigger={"add_domain_link_sheet"}
+  //       />
+  //     );
+  //   }
+  // }
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
