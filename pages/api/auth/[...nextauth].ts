@@ -16,7 +16,7 @@ const VERCEL_DEPLOYMENT = !!process.env.VERCEL_URL;
 
 // This function can run for a maximum of 180 seconds
 export const config = {
-  maxDuration: 60,
+  maxDuration: 180,
 };
 
 export const authOptions: NextAuthOptions = {
@@ -81,7 +81,7 @@ export const authOptions: NextAuthOptions = {
         sameSite: "lax",
         path: "/",
         // When working on localhost, the cookie domain must be omitted entirely (https://stackoverflow.com/a/1188145)
-        domain: VERCEL_DEPLOYMENT ? ".papermark.io" : undefined,
+        domain: VERCEL_DEPLOYMENT ? ".vercel.app" : undefined,
         secure: VERCEL_DEPLOYMENT,
       },
     },
