@@ -16,7 +16,7 @@ const VERCEL_DEPLOYMENT = !!process.env.VERCEL_URL;
 
 // This function can run for a maximum of 180 seconds
 export const config = {
-  maxDuration: 180,
+  maxDuration: 60,
 };
 
 export const authOptions: NextAuthOptions = {
