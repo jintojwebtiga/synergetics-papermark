@@ -8,7 +8,7 @@ import { hexToRgb, log } from "@/lib/utils";
 
 // This function can run for a maximum of 120 seconds
 export const config = {
-  maxDuration: 60,
+  maxDuration: 180,
 };
 
 interface WatermarkConfig {
